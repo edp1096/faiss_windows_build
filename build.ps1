@@ -1,32 +1,42 @@
 $enablePython = "ON" # This will build the python module or c-api
 $useGPU = "ON"
-$createDLL = "OFF"
+$createDLL = "ON"
+
+if ($enablePython -eq "ON") {
+    # Flag "swigfaiss" not work with dll creation flag so, we need to build static library
+    $createDLL = "OFF"
+}
 
 
 $pythonDIR = $(python -c "import sysconfig; print(sysconfig.get_path('data'))").Replace("\", "/")
 $env:LD_LIBRARY_PATH += ";$pythonDIR/libs"
 
+
 echo "Prepare vendors..."
+
 cd vendors
+import-module bitstransfer
 
 if (-not (Test-Path -Path "openblas.zip")) {
     echo "Downloading OpenBLAS..."
-    curl --progress-bar -Lo openblas.zip https://github.com/xianyi/OpenBLAS/releases/download/v0.3.23/OpenBLAS-0.3.23-x64.zip
+    start-bitstransfer -destination openblas.zip -source https://github.com/xianyi/OpenBLAS/releases/download/v0.3.23/OpenBLAS-0.3.23-x64.zip
 
     mkdir -f openblas >$null
-    rm -rf openblas/*
+    remove-item -r -force -ea 0 openblas/*
+    remove-item -force -ea 0 *.TMP
     tar -xf openblas.zip -C openblas
 }
 
 if (-not (Test-Path -Path "swig.zip")) {
     echo "Downloading SWIG..."
-    curl --progress-bar -Lo swig.zip https://udomain.dl.sourceforge.net/project/swig/swigwin/swigwin-4.1.1/swigwin-4.1.1.zip
+    start-bitstransfer -destination swig.zip -source https://udomain.dl.sourceforge.net/project/swig/swigwin/swigwin-4.1.1/swigwin-4.1.1.zip
 
     mkdir -f swig >$null
-    rm -rf swig/*
+    remove-item -r -force -ea 0 swig/*
+    remove-item -force -ea 0 *.TMP
     tar -xf swig.zip -C swig
-    mv swig/swigwin-4.1.1/* swig
-    rm -rf swig/swigwin-4.1.1
+    mv -ea 0 swig/swigwin-4.1.1/* swig
+    remove-item -r -force -ea 0 swig/swigwin-4.1.1
 }
 $env:PATH += ";$pwd/swig"
 
@@ -36,21 +46,21 @@ cd ..
 $openblasROOT = ("$pwd/vendors/openblas/").Replace("\", "/")
 $openblasLIB = "libopenblas"
 
-cp -rf mods/faiss/* faiss/
+cp -r -force mods/faiss/* faiss/
 
 cd faiss
 
-cmake -B build . -DCMAKE_CXX_FLAGS="-i$pythonDIR/include" -DCMAKE_CXX_FLAGS="/EHsc /openmp" -DLAPACK_LIBRARIES="$openblasLIB" -DBLAS_LIBRARIES="$openblasLIB" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU="$useGPU" -DFAISS_ENABLE_PYTHON="$enablePython" -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_ENABLE_C_API="ON" -DBUILD_TESTING=OFF
+cmake -B build . -DCMAKE_CXX_FLAGS="-i$pythonDIR/include" -DCMAKE_CXX_FLAGS="/EHsc" -DLAPACK_LIBRARIES="$openblasLIB" -DBLAS_LIBRARIES="$openblasLIB" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU="$useGPU" -DFAISS_ENABLE_PYTHON="$enablePython" -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_ENABLE_C_API="ON" -DBUILD_TESTING=OFF
 
 cd build
 
-cp -f $openblasROOT/lib/libopenblas.lib faiss/
-cp -f $openblasROOT/lib/libopenblas.lib faiss/python/
-cp -f $pythonDIR/libs/python*.lib faiss/python/
+cp -force $openblasROOT/lib/libopenblas.lib faiss/
+cp -force $openblasROOT/lib/libopenblas.lib faiss/python/
+cp -force $pythonDIR/libs/python*.lib faiss/python/
 
 if ($enablePython -eq "ON") {
     cmake --build . --config Release --target swigfaiss
-    cp -f $openblasROOT/bin/libopenblas.dll faiss/python/libopenblas.exp.dll
+    cp -force $openblasROOT/bin/libopenblas.dll faiss/python/libopenblas.exp.dll
 } else {
     cmake --build . --config Release --target faiss_c
 }

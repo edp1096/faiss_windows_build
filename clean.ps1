@@ -1,10 +1,10 @@
-rm -rf faiss/build
+remove-item -r -force -ea 0 faiss/build
 git restore faiss
 
 if ($args[0] -eq "all") {
-    rm -rf vendors/build
-    rm -rf vendors/openblas
-    rm -f vendors/openblas.zip
-    rm -rf vendors/swig
-    rm -f vendors/swig.zip
+    remove-item -force -ea 0 vendors/*.TMP
+    remove-item -r -force -ea 0 vendors/openblas
+    remove-item -force -ea 0 vendors/openblas.zip
+    remove-item -r -force -ea 0 vendors/swig
+    remove-item -force -ea 0 vendors/swig.zip
 }
