@@ -4,8 +4,8 @@ Not much tested.
 
 ## Environment on my machine
 * Visual Studio 2022 community
-* CMake 3.25.0, 3.26.3
-* Python 3.7.3, 3.10.7
+* CMake 3.26.3
+* Python 3.7.3
 * CUDA 12.1
 
 

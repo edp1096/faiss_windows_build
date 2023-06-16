@@ -35,7 +35,7 @@ if (-not (Test-Path -Path "swig.zip")) {
     remove-item -r -force -ea 0 swig/*
     remove-item -force -ea 0 *.TMP
     tar -xf swig.zip -C swig
-    mv -ea 0 swig/swigwin-4.1.1/* swig
+    move-item -ea 0 swig/swigwin-4.1.1/* swig
     remove-item -r -force -ea 0 swig/swigwin-4.1.1
 }
 $env:PATH += ";$pwd/swig"
@@ -46,7 +46,7 @@ cd ..
 $openblasROOT = ("$pwd/vendors/openblas/").Replace("\", "/")
 $openblasLIB = "libopenblas"
 
-cp -r -force mods/faiss/* faiss/
+copy-item -r -force mods/faiss/* faiss/
 
 cd faiss
 
@@ -54,13 +54,13 @@ cmake -B build . -DCMAKE_CXX_FLAGS="-i$pythonDIR/include" -DCMAKE_CXX_FLAGS="/EH
 
 cd build
 
-cp -force $openblasROOT/lib/libopenblas.lib faiss/
-cp -force $openblasROOT/lib/libopenblas.lib faiss/python/
-cp -force $pythonDIR/libs/python*.lib faiss/python/
+copy-item -force $openblasROOT/lib/libopenblas.lib faiss/
+copy-item -force $openblasROOT/lib/libopenblas.lib faiss/python/
+copy-item -force $pythonDIR/libs/python*.lib faiss/python/
 
 if ($enablePython -eq "ON") {
     cmake --build . --config Release --target swigfaiss
-    cp -force $openblasROOT/bin/libopenblas.dll faiss/python/libopenblas.exp.dll
+    copy-item -force $openblasROOT/bin/libopenblas.dll faiss/python/libopenblas.exp.dll
 } else {
     cmake --build . --config Release --target faiss_c
 }
