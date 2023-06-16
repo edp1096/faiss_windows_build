@@ -36,6 +36,8 @@ cd ..
 $openblasROOT = ("$pwd/vendors/openblas/").Replace("\", "/")
 $openblasLIB = "libopenblas"
 
+cp -rf mods/faiss/* faiss/
+
 cd faiss
 
 # cmake -B build . -G "MinGW Makefiles" -DCMAKE_CXX_FLAGS="-std=c++20 -fpermissive" -DLAPACK_LIBRARIES="openblas" -DBLAS_LIBRARIES="openblas" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU=OFF -DFAISS_ENABLE_PYTHON=OFF -DBUILD_SHARED_LIBS=ON -DFAISS_ENABLE_C_API=ON -DBUILD_TESTING=OFF
@@ -45,7 +47,6 @@ cd faiss
 cmake -B build . -DCMAKE_PREFIX_PATH="$openblasROOT" -DCMAKE_CXX_FLAGS="/EHsc" -DLAPACK_LIBRARIES="$openblasLIB" -DBLAS_LIBRARIES="$openblasLIB" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU="$useGPU" -DFAISS_ENABLE_PYTHON="$enablePython" -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_ENABLE_C_API="ON" -DBUILD_TESTING=OFF
 
 cd build
-
 
 cp -f $openblasROOT/lib/libopenblas.lib faiss/
 cp -f $pythonDIR/libs/python*.lib faiss/python/
