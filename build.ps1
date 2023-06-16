@@ -1,3 +1,5 @@
+cd vendors
+
 echo "Downloading OpenBLAS..."
 curl --progress-bar -Lo openblas.zip https://github.com/xianyi/OpenBLAS/releases/download/v0.3.23/OpenBLAS-0.3.23-x64.zip
 
@@ -20,6 +22,8 @@ $env:PATH += ";$pwd/swig"
 # echo $pythonIncludeDIR
 # echo $pythonLibDIR
 
+
+cd vendors/faiss
 
 # cmake -B build . -G "MinGW Makefiles" -DCMAKE_CXX_FLAGS="-std=c++20 -fpermissive" -DLAPACK_LIBRARIES="openblas" -DBLAS_LIBRARIES="openblas" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU=OFF -DFAISS_ENABLE_PYTHON=OFF -DBUILD_SHARED_LIBS=ON -DFAISS_ENABLE_C_API=ON -DBUILD_TESTING=OFF
 # cmake -B build . -DCMAKE_CXX_FLAGS="/EHsc" -DLAPACK_LIBRARIES="openblas" -DBLAS_LIBRARIES="openblas" -DPython_EXECUTABLE="D:/dev/pcbangstudio/tools/langs/python3" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU=ON -DFAISS_ENABLE_PYTHON=ON -DBUILD_SHARED_LIBS=ON -DFAISS_ENABLE_C_API=ON -DBUILD_TESTING=OFF

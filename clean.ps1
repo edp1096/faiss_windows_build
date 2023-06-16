@@ -3,3 +3,5 @@ rm -rf ./openblas
 rm -f ./openblas.zip
 rm -rf ./swig
 rm -f ./swig.zip
+
+git restore vendors
