@@ -13,6 +13,10 @@
 
 #include <stdlib.h>
 
+#ifdef _MSC_VER
+#include <stdint.h>
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
