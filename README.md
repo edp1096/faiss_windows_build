@@ -23,6 +23,15 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 Unblock-File *.ps1
 ```
 
+### Submodule
+* Run if faiss is not cloned yet
+```powershell
+git submodule update --init --recursive
+cd faiss
+git checkout v1.7.4
+cd ..
+```
+
 * `OpenBLAS` and `SWIG` will be downloaded and be used during compilation
 ```powershell
 ./build.ps1

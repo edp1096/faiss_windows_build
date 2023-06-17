@@ -59,7 +59,7 @@ copy-item -r -force mods/faiss/* faiss/
 
 cd faiss
 
-cmake -B build . -DCMAKE_CXX_FLAGS="-i$pythonDIR/include" -DCMAKE_CXX_FLAGS="/EHsc" -DLAPACK_LIBRARIES="$openblasLIB" -DBLAS_LIBRARIES="$openblasLIB" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU="$useGPU" -DFAISS_ENABLE_PYTHON="$enablePython" -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_OPT_LEVEL="$optLevel" -DFAISS_ENABLE_C_API="$enableC_API" -DBUILD_TESTING=OFF
+cmake -B build . -DCMAKE_CXX_FLAGS="-i$pythonDIR/include" -DCMAKE_CXX_FLAGS="/EHsc /wd4819" -DLAPACK_LIBRARIES="$openblasLIB" -DBLAS_LIBRARIES="$openblasLIB" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU="$useGPU" -DFAISS_ENABLE_PYTHON="$enablePython" -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_OPT_LEVEL="$optLevel" -DFAISS_ENABLE_C_API="$enableC_API" -DBUILD_TESTING=OFF
 
 cd build
 
