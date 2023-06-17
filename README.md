@@ -63,4 +63,4 @@ python main.py
 ```
 
 ## Uninstall
-* Delete `site-packages/faiss-1.7.4-py3.xx.egg` folder
+* Delete `%PYTHON_LIB_PATH%/site-packages/faiss-1.7.4-py3.xx.egg` folder
