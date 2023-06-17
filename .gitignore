@@ -1,3 +1,4 @@
 faiss/build
 vendors/*
 !vendors/.gitkeep
+output.log

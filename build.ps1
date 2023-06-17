@@ -1,10 +1,19 @@
-$enablePython = "ON" # This will build the python module or c-api
+$enablePython = "ON"
+$enableC_API = "OFF"
+
 $useGPU = "ON"
 $createDLL = "ON"
+$optLevel = "generic" # generic, avx2
 
 if ($enablePython -eq "ON") {
     # Flag "swigfaiss" not work with dll creation flag so, we need to build static library
+    $enablePython = "ON"
+    $enableC_API = "OFF"
     $createDLL = "OFF"
+} else {
+    $enablePython = "OFF"
+    $enableC_API = "ON"
+    $createDLL = "ON"
 }
 
 
@@ -50,7 +59,7 @@ copy-item -r -force mods/faiss/* faiss/
 
 cd faiss
 
-cmake -B build . -DCMAKE_CXX_FLAGS="-i$pythonDIR/include" -DCMAKE_CXX_FLAGS="/EHsc" -DLAPACK_LIBRARIES="$openblasLIB" -DBLAS_LIBRARIES="$openblasLIB" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU="$useGPU" -DFAISS_ENABLE_PYTHON="$enablePython" -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_ENABLE_C_API="ON" -DBUILD_TESTING=OFF
+cmake -B build . -DCMAKE_CXX_FLAGS="-i$pythonDIR/include" -DCMAKE_CXX_FLAGS="/EHsc" -DLAPACK_LIBRARIES="$openblasLIB" -DBLAS_LIBRARIES="$openblasLIB" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU="$useGPU" -DFAISS_ENABLE_PYTHON="$enablePython" -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_OPT_LEVEL="$optLevel" -DFAISS_ENABLE_C_API="$enableC_API" -DBUILD_TESTING=OFF
 
 cd build
 
