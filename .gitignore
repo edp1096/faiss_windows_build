@@ -1,4 +1,4 @@
-faiss/build
+build/
 vendors/*
 !vendors/.gitkeep
 output.log

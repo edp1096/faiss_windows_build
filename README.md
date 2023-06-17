@@ -1,12 +1,15 @@
 faiss build for my windows machine.
 
-Not much tested.
+Not tested.
+
 
 ## Environment on my machine
+* H/W: AMD Ryzen 3600, 32GB RAM, RTX 3060Ti
 * Visual Studio 2022 community
 * CMake 3.26.3
-* Python 3.7.3
-* CUDA 12.1
+* Python 3.7.3, 3.10.11
+* CUDA Toolkit 12.1
+    * Environment variable `CUDA_PATH` must be set
 
 
 ## Build
@@ -24,7 +27,7 @@ Unblock-File *.ps1
 ```
 
 ### Submodule
-* Run if faiss is not cloned yet
+* Run if faiss submodule is not cloned yet
 ```powershell
 git submodule update --init --recursive
 cd faiss
@@ -32,11 +35,12 @@ git checkout v1.7.4
 cd ..
 ```
 
-* `OpenBLAS` and `SWIG` will be downloaded and be used during compilation
+### Compile
+* Not use MKL. Instead `OpenBLAS` and `SWIG` will be downloaded and be used during compilation
 ```powershell
 ./build.ps1
 
-cd faiss/build/faiss/python
+cd build/faiss/python
 python setup.py install
 ```
 

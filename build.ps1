@@ -1,24 +1,21 @@
-$enablePython = "ON"
-$enableC_API = "OFF"
+$target = "python" # python, c_api
 
+$enablePython = "OFF"
+$enableC_API = "OFF"
 $useGPU = "ON"
 $createDLL = "ON"
-$optLevel = "generic" # generic, avx2
+$optLevel = "avx2" # generic, avx2
 
-if ($enablePython -eq "ON") {
-    # Flag "swigfaiss" not work with dll creation flag so, we need to build static library
-    $enablePython = "ON"
-    $enableC_API = "OFF"
-    $createDLL = "OFF"
-} else {
-    $enablePython = "OFF"
-    $enableC_API = "ON"
-    $createDLL = "ON"
+
+if ($target -eq "python") {
+    if (get-command "python.exe" -ea 0) {
+        $pythonDIR = (python -c "import sysconfig; print(sysconfig.get_path('data'))").Replace("\", "/")
+        $env:LD_LIBRARY_PATH += ";$pythonDIR/libs"
+    } else {
+        echo "Python not found."
+        exit
+    }
 }
-
-
-$pythonDIR = $(python -c "import sysconfig; print(sysconfig.get_path('data'))").Replace("\", "/")
-$env:LD_LIBRARY_PATH += ";$pythonDIR/libs"
 
 
 echo "Prepare vendors..."
@@ -57,22 +54,49 @@ $openblasLIB = "libopenblas"
 
 copy-item -r -force mods/faiss/* faiss/
 
+
 cd faiss
 
-cmake -B build . -DCMAKE_CXX_FLAGS="-i$pythonDIR/include" -DCMAKE_CXX_FLAGS="/EHsc /wd4819" -DLAPACK_LIBRARIES="$openblasLIB" -DBLAS_LIBRARIES="$openblasLIB" -DBLA_VENDOR=OpenBLAS -DFAISS_ENABLE_GPU="$useGPU" -DFAISS_ENABLE_PYTHON="$enablePython" -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_OPT_LEVEL="$optLevel" -DFAISS_ENABLE_C_API="$enableC_API" -DBUILD_TESTING=OFF
+if ($target -eq "python") {
+    $enablePython = "ON"
+    $enableC_API = "OFF"
+    $createDLL = "OFF"
 
-cd build
+    cmake -B ../build . `
+    -DCMAKE_CXX_FLAGS="/std:c++20 /EHsc /wd4819" `
+    -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_ENABLE_PYTHON="$enablePython" -DFAISS_ENABLE_C_API="$enableC_API" `
+    -DBLA_VENDOR=OpenBLAS            -DBLAS_LIBRARIES="$openblasLIB"       -DLAPACK_LIBRARIES="$openblasLIB" `
+    -DFAISS_OPT_LEVEL="$optLevel"    -DFAISS_ENABLE_GPU="$useGPU" `
+    -DCMAKE_BUILD_TYPE=Release       -DBUILD_TESTING=OFF
 
-copy-item -force $openblasROOT/lib/libopenblas.lib faiss/
-copy-item -force $openblasROOT/lib/libopenblas.lib faiss/python/
-copy-item -force $pythonDIR/libs/python*.lib faiss/python/
+    cd ../build
 
-if ($enablePython -eq "ON") {
+    copy-item -force $openblasROOT/lib/libopenblas.lib faiss/python/
+    copy-item -force $pythonDIR/libs/python*.lib faiss/python/
+
     cmake --build . --config Release --target swigfaiss
     copy-item -force $openblasROOT/bin/libopenblas.dll faiss/python/libopenblas.exp.dll
+    remove-item -r -force -ea 0 dist
+    mkdir -f ../dist >$null
+    copy-item -r -force faiss/python/* ../dist/
 } else {
+    $enablePython = "OFF"
+    $enableC_API = "ON"
+    $createDLL = "ON"
+
+    cmake -B ../build . `
+    -DCMAKE_CXX_FLAGS="/std:c++20 /EHsc /wd4819" `
+    -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_ENABLE_PYTHON="$enablePython" -DFAISS_ENABLE_C_API="$enableC_API" `
+    -DBLA_VENDOR=OpenBLAS            -DBLAS_LIBRARIES="$openblasLIB"       -DLAPACK_LIBRARIES="$openblasLIB" `
+    -DFAISS_OPT_LEVEL="$optLevel"    -DFAISS_ENABLE_GPU="$useGPU" `
+    -DCMAKE_BUILD_TYPE=Release       -DBUILD_TESTING=OFF
+
+    cd ../build
+
+    copy-item -force $openblasROOT/lib/libopenblas.lib faiss/
+
     cmake --build . --config Release --target faiss_c
 }
 
+cd ..
 
-cd ../..

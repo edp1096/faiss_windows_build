@@ -1,0 +1,19 @@
+# CMake generation dependency list for this directory.
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeParseImplicitLinkInfo.cmake
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/FindCUDAToolkit.cmake
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/FindOpenMP.cmake
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/FindPackageMessage.cmake
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/FindPython.cmake
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/FindPython/Support.cmake
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/FindSWIG.cmake
+D:/dev/my-py-set/python3/Lib/site-packages/cmake/data/share/cmake-3.26/Modules/UseSWIG.cmake
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/CMakeLists.txt
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/__init__.py
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/array_conversions.py
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/class_wrappers.py
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/extra_wrappers.py
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/gpu_wrappers.py
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/loader.py
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/setup.py
+D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/swigfaiss.swig
