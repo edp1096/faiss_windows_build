@@ -98,7 +98,9 @@ keys_gpu = [
 
 
 keys_to_test = unlimited_mem_keys
-use_gpu = False
+# use_gpu = False
+# keys_to_test = keys_gpu
+use_gpu = True
 
 
 if use_gpu:
