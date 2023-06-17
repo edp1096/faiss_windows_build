@@ -40,7 +40,7 @@ cd ..
 ```powershell
 ./build.ps1
 
-cd build/faiss/python
+cd dist
 python setup.py install
 ```
 
