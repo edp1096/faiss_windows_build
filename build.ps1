@@ -76,7 +76,7 @@ if ($target -eq "python") {
 
     cmake --build . --config Release --target swigfaiss
     copy-item -force $openblasROOT/bin/libopenblas.dll faiss/python/libopenblas.exp.dll
-    remove-item -r -force -ea 0 dist
+    remove-item -r -force -ea 0 ../dist
     mkdir -f ../dist >$null
     copy-item -r -force faiss/python/* ../dist/
 } else {
