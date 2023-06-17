@@ -97,10 +97,10 @@ keys_gpu = [
     "IVF4096,PQ32"]
 
 
-keys_to_test = unlimited_mem_keys
-use_gpu = False
-# keys_to_test = keys_gpu
-# use_gpu = True
+# keys_to_test = unlimited_mem_keys
+# use_gpu = False
+keys_to_test = keys_gpu
+use_gpu = True
 
 
 if use_gpu:

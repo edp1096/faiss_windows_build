@@ -57,6 +57,21 @@ copy-item -r -force mods/faiss/* faiss/
 
 cd faiss
 
+# generate-code - https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards
+# Maxwell (CUDA >= 6 <= 11)
+# 50 / Quadro 4000, Quadro 6000
+# 52 / GTX970, GTX980, GTX Titan X
+# 53 / Tegra X1, Jetson nano
+# Pascal (CUDA >= 8)
+# 60 / Quadro GP100, Tesla P100
+# 61 / GTX1050, GTX1060, GTX1070, GTX1080, GTX1080Ti, Titan Xp, Tesla P4, Tesla P40
+# 62 / Tegra X2
+# Turing (CUDA >= 9)
+# 75 / GTX1660, RTX2060, RTX2070, RTX2080, RTX2080Ti, Titan RTX
+# Ampere (CUDA >= 11.1)
+# 80 / A100
+# 86 / RTX3050, RTX3060, RTX3060Ti, RTX3070, RTX3080, RTX3090, RTX A4000, RTX A6000, RTX A40, RTX A10
+# 87 / Jetson AGX
 if ($target -eq "python") {
     $enablePython = "ON"
     $enableC_API = "OFF"
@@ -67,14 +82,15 @@ if ($target -eq "python") {
     -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_ENABLE_PYTHON="$enablePython" -DFAISS_ENABLE_C_API="$enableC_API" `
     -DBLA_VENDOR=OpenBLAS            -DBLAS_LIBRARIES="$openblasLIB"       -DLAPACK_LIBRARIES="$openblasLIB" `
     -DFAISS_OPT_LEVEL="$optLevel"    -DFAISS_ENABLE_GPU="$useGPU" `
-    -DCMAKE_BUILD_TYPE=Release       -DBUILD_TESTING=OFF
+    -DCMAKE_BUILD_TYPE=Release       -DBUILD_TESTING=OFF `
+    -DCMAKE_CUDA_ARCHITECTURES="86"
 
     cd ../build
 
     copy-item -force $openblasROOT/lib/libopenblas.lib faiss/python/
     copy-item -force $pythonDIR/libs/python*.lib faiss/python/
 
-    cmake --build . --config Release --target swigfaiss
+    cmake --build . --config Release --target swigfaiss -j6
     copy-item -force $openblasROOT/bin/libopenblas.dll faiss/python/libopenblas.exp.dll
     remove-item -r -force -ea 0 ../dist
     mkdir -f ../dist >$null
@@ -89,13 +105,14 @@ if ($target -eq "python") {
     -DBUILD_SHARED_LIBS="$createDLL" -DFAISS_ENABLE_PYTHON="$enablePython" -DFAISS_ENABLE_C_API="$enableC_API" `
     -DBLA_VENDOR=OpenBLAS            -DBLAS_LIBRARIES="$openblasLIB"       -DLAPACK_LIBRARIES="$openblasLIB" `
     -DFAISS_OPT_LEVEL="$optLevel"    -DFAISS_ENABLE_GPU="$useGPU" `
-    -DCMAKE_BUILD_TYPE=Release       -DBUILD_TESTING=OFF
+    -DCMAKE_BUILD_TYPE=Release       -DBUILD_TESTING=OFF `
+    -DCMAKE_CUDA_ARCHITECTURES="86"
 
     cd ../build
 
     copy-item -force $openblasROOT/lib/libopenblas.lib faiss/
 
-    cmake --build . --config Release --target faiss_c
+    cmake --build . --config Release --target faiss_c -j6
 }
 
 cd ..
