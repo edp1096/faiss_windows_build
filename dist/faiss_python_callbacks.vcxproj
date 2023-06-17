@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{637D6422-AA69-3152-B727-C04529502677}</ProjectGuid>
+    <ProjectGuid>{5E202EB8-8156-358A-B82A-7F92BD2235EB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -60,26 +60,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">faiss_python_callbacks.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">faiss_python_callbacks</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">faiss_python_callbacks.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">faiss_python_callbacks</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">faiss_python_callbacks.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">faiss_python_callbacks</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">faiss_python_callbacks.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">faiss_python_callbacks</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -96,10 +96,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -116,7 +116,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -133,10 +133,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -153,7 +153,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -170,10 +170,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -190,7 +190,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
@@ -206,10 +206,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\..\..;D:\dev\my-py-set\python3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -225,11 +225,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\CMakeLists.txt">
+    <CustomBuild Include="D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/dev/my-py-set/playground/faiss_win_build/faiss/faiss/python/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/dev/pcbangstudio/workspace/faiss_win_build/faiss -BD:/dev/pcbangstudio/workspace/faiss_win_build/build --check-stamp-file D:/dev/pcbangstudio/workspace/faiss_win_build/build/faiss/python/CMakeFiles/generate.stamp
+D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/dev/my-py-set/playground/faiss_win_build/faiss -BD:/dev/my-py-set/playground/faiss_win_build/build --check-stamp-file D:/dev/my-py-set/playground/faiss_win_build/build/faiss/python/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -237,12 +237,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindOpenMP.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython\Support.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindSWIG.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\UseSWIG.cmake;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\__init__.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\array_conversions.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\class_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\extra_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\gpu_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\loader.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\setup.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\swigfaiss.swig;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\__init__.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\array_conversions.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\class_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\extra_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\gpu_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\loader.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\setup.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\swigfaiss.swig;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindOpenMP.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython\Support.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindSWIG.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\UseSWIG.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/dev/my-py-set/playground/faiss_win_build/faiss/faiss/python/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/dev/pcbangstudio/workspace/faiss_win_build/faiss -BD:/dev/pcbangstudio/workspace/faiss_win_build/build --check-stamp-file D:/dev/pcbangstudio/workspace/faiss_win_build/build/faiss/python/CMakeFiles/generate.stamp
+D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/dev/my-py-set/playground/faiss_win_build/faiss -BD:/dev/my-py-set/playground/faiss_win_build/build --check-stamp-file D:/dev/my-py-set/playground/faiss_win_build/build/faiss/python/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -250,12 +250,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindOpenMP.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython\Support.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindSWIG.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\UseSWIG.cmake;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\__init__.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\array_conversions.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\class_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\extra_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\gpu_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\loader.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\setup.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\swigfaiss.swig;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\__init__.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\array_conversions.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\class_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\extra_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\gpu_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\loader.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\setup.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\swigfaiss.swig;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindOpenMP.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython\Support.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindSWIG.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\UseSWIG.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/dev/my-py-set/playground/faiss_win_build/faiss/faiss/python/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/dev/pcbangstudio/workspace/faiss_win_build/faiss -BD:/dev/pcbangstudio/workspace/faiss_win_build/build --check-stamp-file D:/dev/pcbangstudio/workspace/faiss_win_build/build/faiss/python/CMakeFiles/generate.stamp
+D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/dev/my-py-set/playground/faiss_win_build/faiss -BD:/dev/my-py-set/playground/faiss_win_build/build --check-stamp-file D:/dev/my-py-set/playground/faiss_win_build/build/faiss/python/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,12 +263,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindOpenMP.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython\Support.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindSWIG.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\UseSWIG.cmake;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\__init__.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\array_conversions.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\class_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\extra_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\gpu_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\loader.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\setup.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\swigfaiss.swig;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\__init__.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\array_conversions.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\class_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\extra_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\gpu_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\loader.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\setup.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\swigfaiss.swig;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindOpenMP.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython\Support.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindSWIG.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\UseSWIG.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/dev/my-py-set/playground/faiss_win_build/faiss/faiss/python/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/dev/pcbangstudio/workspace/faiss_win_build/faiss -BD:/dev/pcbangstudio/workspace/faiss_win_build/build --check-stamp-file D:/dev/pcbangstudio/workspace/faiss_win_build/build/faiss/python/CMakeFiles/generate.stamp
+D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\bin\cmake.exe -SD:/dev/my-py-set/playground/faiss_win_build/faiss -BD:/dev/my-py-set/playground/faiss_win_build/build --check-stamp-file D:/dev/my-py-set/playground/faiss_win_build/build/faiss/python/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -276,17 +276,17 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindOpenMP.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython\Support.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindSWIG.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\UseSWIG.cmake;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\__init__.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\array_conversions.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\class_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\extra_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\gpu_wrappers.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\loader.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\setup.py;D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\swigfaiss.swig;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\__init__.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\array_conversions.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\class_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\extra_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\gpu_wrappers.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\loader.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\setup.py;D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\swigfaiss.swig;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindCUDAToolkit.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindOpenMP.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPackageMessage.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindPython\Support.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\FindSWIG.cmake;D:\dev\my-py-set\python3\Lib\site-packages\cmake\data\share\cmake-3.26\Modules\UseSWIG.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\python_callbacks.cpp" />
+    <ClCompile Include="D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\python_callbacks.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\dev\pcbangstudio\workspace\faiss_win_build\build\ZERO_CHECK.vcxproj">
-      <Project>{3AD0997F-FB4C-362B-BE8C-B474CB4B7E74}</Project>
+    <ProjectReference Include="D:\dev\my-py-set\playground\faiss_win_build\build\ZERO_CHECK.vcxproj">
+      <Project>{13AEB78C-6728-3021-AE20-6C5C96852ECA}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

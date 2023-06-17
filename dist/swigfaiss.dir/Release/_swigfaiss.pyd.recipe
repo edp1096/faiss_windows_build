@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\dev\pcbangstudio\workspace\faiss_win_build\build\x64\Release\ZERO_CHECK</FullPath>
+      <FullPath>D:\dev\my-py-set\playground\faiss_win_build\build\x64\Release\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\Release\_swigfaiss.pyd</FullPath>
+      <FullPath>D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\Release\_swigfaiss.pyd</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

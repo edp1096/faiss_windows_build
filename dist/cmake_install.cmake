@@ -1,4 +1,4 @@
-# Install script for directory: D:/dev/pcbangstudio/workspace/faiss_win_build/faiss/faiss/python
+# Install script for directory: D:/dev/my-py-set/playground/faiss_win_build/faiss/faiss/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

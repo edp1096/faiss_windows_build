@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\CMakeFiles\swigfaiss.dir\swigfaissPYTHON_wrap.cxx">
+    <ClCompile Include="D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\CMakeFiles\swigfaiss.dir\swigfaissPYTHON_wrap.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\swigfaiss.swig" />
-    <CustomBuild Include="D:\dev\pcbangstudio\workspace\faiss_win_build\faiss\faiss\python\CMakeLists.txt" />
+    <CustomBuild Include="D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\swigfaiss.swig" />
+    <CustomBuild Include="D:\dev\my-py-set\playground\faiss_win_build\faiss\faiss\python\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\dev\pcbangstudio\workspace\faiss_win_build\build\faiss\python\swigfaiss.py" />
+    <None Include="D:\dev\my-py-set\playground\faiss_win_build\build\faiss\python\swigfaiss.py" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{43896781-DA7A-3B7B-BCBF-F1CD0674BBAA}</UniqueIdentifier>
+      <UniqueIdentifier>{9055AE2D-6304-300F-A11C-01B88219F6AF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
