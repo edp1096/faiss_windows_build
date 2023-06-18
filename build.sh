@@ -5,16 +5,12 @@
 # - Because of doxygen issue so, swig should >= 4.0.2
 # - Run below commands before running this script
 # sudo apt update
-### apt-cache search openblas
-### sudo apt install swig4.0 libblas-dev liblapack-dev
+# apt-cache search openblas
 # sudo apt install swig4.0 libopenblas-dev
-### Found BLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so  
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
-
-# cp /usr/lib/x86_64-linux-gnu/libopenblas.so ./
 
 # Uninstall
-# Remove /home/username/.local/lib/python3.10/site-packages/faiss
+# Remove /home/username/.local/lib/python3.10/site-packages/faiss-1.7.4-py3.10.egg
+# Or remove /usr/local/lib/python3.10/dist-packages/faiss-1.7.4-py3.10.egg
 
 
 mode="python" # python, c_api
