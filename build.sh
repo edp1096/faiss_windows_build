@@ -8,9 +8,16 @@
 # apt-cache search openblas
 # sudo apt install swig4.0 libopenblas-dev
 
+# Install
+# cd dist_lin
+# python3 ./setup.py install
+# Or pip install .
+# Or sudo python3 ./setup.py install
+
 # Uninstall
-# Remove /home/username/.local/lib/python3.10/site-packages/faiss-1.7.4-py3.10.egg
-# Or remove /usr/local/lib/python3.10/dist-packages/faiss-1.7.4-py3.10.egg
+# rm -rf /home/username/.local/lib/python3.10/site-packages/faiss
+# Or rm -rf /home/username/.local/lib/python3.10/site-packages/faiss-1.7.4-py3.10.egg
+# Or sudo rm -rf /usr/local/lib/python3.10/dist-packages/faiss-1.7.4-py3.10.egg
 
 
 mode="python" # python, c_api
