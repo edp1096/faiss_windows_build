@@ -11,13 +11,13 @@
 # Install
 # cd dist_lin
 # python3 ./setup.py install
-# Or pip install .
 # Or sudo python3 ./setup.py install
 
 # Uninstall
 # rm -rf /home/username/.local/lib/python3.10/site-packages/faiss
-# Or rm -rf /home/username/.local/lib/python3.10/site-packages/faiss-1.7.4-py3.10.egg
-# Or sudo rm -rf /usr/local/lib/python3.10/dist-packages/faiss-1.7.4-py3.10.egg
+# Or rm -rf /home/username/.local/lib/python3.10/site-packages/faiss-1.7.4.egg-info
+# Or sudo rm -rf /usr/local/lib/python3.10/dist-packages/faiss
+# Or sudo rm -rf /usr/local/lib/python3.10/dist-packages/faiss-1.7.4.egg-info
 
 
 mode="python" # python, c_api
