@@ -44,7 +44,10 @@ cd ..
 * Not use MKL. Instead `OpenBLAS` and `SWIG` will be downloaded and be used during compilation
 ```powershell
 ./build.ps1
+```
 
+### Install
+```powershell
 cd dist
 python setup.py install
 ```
