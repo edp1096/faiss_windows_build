@@ -1,6 +1,8 @@
 faiss build for my windows machine.
 
-Not tested.
+Not so much tested.
+
+`build.ps1` runs only for RTX30 series so for others, edit value of `CMAKE_CUDA_ARCHITECTURES` in `build.ps1` then rebuild.
 
 
 ## Environment on my machine
@@ -10,9 +12,12 @@ Not tested.
 * Python 3.7.3, 3.10.11
 * CUDA Toolkit 12.1
     * Environment variable `CUDA_PATH` must be set
+* Git 2.40.1
 
 
 ## Build
+
+First, clone or download this repository.
 
 ### Powershell scripts
 * Before execute `ps1` script files, `ExecutionPolicy` should be set to `RemoteSigned` and unblock `ps1` files
