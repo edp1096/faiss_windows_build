@@ -2,4 +2,4 @@ build/
 build_lin/
 vendors/*
 !vendors/.gitkeep
-output.log
+/output.log
